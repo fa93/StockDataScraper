@@ -1,5 +1,5 @@
 
-# stock Market Data Scraper 
+# Stock Market Data Scraper 
 
 This is a Worker Service project to scrape  stock data from [Dhaka Stock Exchange](https://www.dsebd.org/) as a background service.
 ## Installation
