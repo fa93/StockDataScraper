@@ -10,15 +10,18 @@ This is a Worker Service project to scrape  stock data from [Dhaka Stock Exchang
 ```
 2) Run the file with extension ` .Sln ` on Visual Studio
 
-3) Set the `DefaultConnection` in `appsettings.json` file 
+3) Create a databse 
+
+4) Set the `DefaultConnection` in `appsettings.json` file 
 ```bash
 "ConnectionStrings": {
     "DefaultConnection": ""
   },
 ```
 
-4) Now, Update the migrations by running the following command on ``` Package Manager Console ```
+5) Now, Add and Update the migrations by running the following command on ``` Package Manager Console ```
 ```bash
+  dotnet ef migrations add anyNameTable --project DataScraper.Service --context DseDbContext -o Data/Migrations
   dotnet ef database update --project DataScraper.Service --context DseDbContext
 ```
 ⚠️ Must install ` Microsoft Visual Studio `, ` Microsoft SQL Server` and `SQL Server Management Studio` on your device
